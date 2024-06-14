@@ -1,112 +1,37 @@
 import os
 import streamlit as st
-import panel as pn
-from database import init_db, insert_ingredients, get_ingredients_by_type
 from dotenv import load_dotenv, find_dotenv
 import openai
-
-type_to_ingre = {
-    "crust": ["thin", "thick", " stuffed", "gluten-free", "cauliflower", "whole wheat"],
-    "sauce": ["tomato", "alfredo", "pesto", "barbecue", "garlic", "olive oil"],
-    "cheese": [
-        "mozzarella",
-        "cheddar",
-        "parmesan",
-        "provolone",
-        "feta",
-        "blue cheese",
-        "ricotta",
-        "goat cheese",
-        "vegan cheese",
-    ],
-    "meat": [
-        "pepperoni",
-        "sausage",
-        "bacon",
-        "ham",
-        "chicken",
-        "ground beef",
-        "salami",
-        "prosciutto",
-        "meatballs",
-    ],
-    "vegetable": [
-        "mushrooms",
-        "onions",
-        "bell peppers",
-        "black olives",
-        "spinach",
-        "artichokes",
-        "tomatoes",
-        "jalapeño",
-        "pineapple",
-        "garlic",
-        "broccoli",
-        "arugula",
-    ],
-    "additional": [
-        "fresh basil",
-        "oregano",
-        "red pepper flakes",
-        "balsamic",
-        "glaze",
-        "sun-dried tomatoes",
-        "capers",
-        "anchovies",
-        "avocado",
-    ],
-    "seasoning": [
-        "italian herbs",
-        "crushed red pepper",
-        "garlic powder",
-        "onion powder",
-        "freshly grounded black pepper",
-    ],
-}
 
 # Load environment variables
 _ = load_dotenv(find_dotenv())
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
+# Function to get completion from a single prompt
 def get_completion(prompt, model="gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
     response = openai.ChatCompletion.create(
         model=model,
         messages=messages,
-        temperature=0,
+        temperature=0,  # degree of randomness in the model's output
     )
     return response.choices[0].message["content"]
 
 
+# Function to get completion from a list of messages
 def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0):
     response = openai.ChatCompletion.create(
         model=model,
         messages=messages,
-        temperature=temperature,
+        temperature=temperature,  # degree of randomness in the model's output
     )
     return response.choices[0].message["content"]
 
 
-# Create ingredients to database
-init_db()
-
-# # Insert ingredients to database
-# insert_ingredients(type_to_ingre)
-
-# # Try to get all the values of each table
-# for item in type_to_ingre.keys():
-#     print(get_ingredients_by_type(item))
-
-st.title("Pizza Order Management System")
-
-tab1, tab2 = st.tabs(["Client Bot", "Order Bot"])
-
-
-with tab1:
-    st.header("Build Your Pizza")
-
-    context = [
+# Initialize context in session state
+if "context" not in st.session_state:
+    st.session_state.context = [
         {
             "role": "system",
             "content": """
@@ -141,14 +66,16 @@ with tab1:
         }
     ]
 
-    input_text = st.text_input("Enter your message here...", "Hi")
-    if st.button("Send"):
-        context.append({"role": "user", "content": input_text})
-        response = get_completion_from_messages(context)
-        context.append({"role": "assistant", "content": response})
+st.title("A.T.O.M")
+st.subheader("Chatbot for college student questions")
 
-        for message in context:
-            st.write(f"{message['role'].capitalize()}: {message['content']}")
+# Input section
+input_text = st.text_input("Enter your message here...", "Hi")
+if st.button("Send"):
+    st.session_state.context.append({"role": "user", "content": input_text})
+    response = get_completion_from_messages(st.session_state.context)
+    st.session_state.context.append({"role": "assistant", "content": response})
 
-with tab2:
-    st.header("Clients' Orders")
+# Display conversation history
+for message in st.session_state.context:
+    st.write(f"{message['role'].capitalize()}: {message['content']}")
