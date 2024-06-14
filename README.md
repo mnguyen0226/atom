@@ -1,6 +1,6 @@
 # A.T.O.M
 
-`Chatbot for international student assistance in the US with Python, Streamlit, SQLite, and ChatGPT API.`
+`Customed chatbot based on prompted roles with Python, Streamlit, SQLite, and ChatGPT API.`
 
 ### Applications
 - Use to train/assist multiple people with a small amount of documentation.
