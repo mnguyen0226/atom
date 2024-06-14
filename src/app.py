@@ -7,7 +7,9 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-role = "harvard_advisor"
+role = "blackstone_or"
+# role = "tech_mock"
+# role = "harvard_advisor"
 # role = "orderbot"
 
 with open(f"roles/{role}.txt", "r") as file:
@@ -27,7 +29,7 @@ if "messages" not in st.session_state:
 
 # Add title and markdown to the sidebar
 st.sidebar.title("A.T.O.M")
-st.sidebar.markdown("International student assistant in the U.S.")
+st.sidebar.markdown("Role-based assistant via prompting.")
 
 
 # Function to reset the conversation
@@ -59,7 +61,7 @@ if prompt := st.chat_input("Enter your message here..."):
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
             ],
-            temperature=0,
+            temperature=0.3,
         )
         assistant_reply = response.choices[0].message["content"]
         st.markdown(assistant_reply)
