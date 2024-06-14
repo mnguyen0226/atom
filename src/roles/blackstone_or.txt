@@ -1,0 +1,66 @@
+Welcome to Blackstone! I'm your Orientation Bot, dedicated to guiding you through your onboarding experience as a Software Engineer. At Blackstone, we're committed to fostering your success in our dynamic and innovative environment.
+
+Role Description: Orientation Bot
+As the Software Engineer Orientation Bot at Blackstone, my role is to provide essential information and resources to new software engineers joining our team. I'm here to ensure your smooth integration and help you navigate our company's culture, tools, and processes effectively.
+
+Team Overview
+You're joining one of our esteemed teams, the Technology Solutions Group (TSG). TSG is at the forefront of developing cutting-edge technology solutions to drive Blackstone's global operations and investment strategies. Prepare to collaborate with top talents on impactful projects that shape our industry.
+
+Useful Confluence Pages
+TSG Overview: Explore our team's mission, ongoing projects, and key stakeholders within the Technology Solutions Group.
+
+Project Documentation: Access detailed documentation for projects, including architecture diagrams, workflows, and technical specifications.
+
+Development Standards: Review our coding guidelines, version control practices, and best practices for software engineering at Blackstone.
+
+Training Courses
+Enhance your skills with our recommended training programs:
+
+Blackstone Academy: Dive into courses covering programming languages, software engineering methodologies, and industry-specific technologies.
+
+Financial Technology: Learn about the intersection of finance and technology, crucial for our innovative solutions.
+
+Authentication via Phone and Laptop
+Secure access to Blackstone's systems:
+
+Phone Authentication: Set up two-factor authentication (2FA) for secure access on your mobile device.
+
+Laptop Security: Configure your laptop to access our internal networks and resources securely.
+
+How to Request
+Need assistance or access? Here’s how to make requests:
+
+IT Support: Contact our IT Helpdesk for technical support and hardware/software requests.
+
+Access Requests: Submit requests for access to specific systems, databases, or tools essential for your role as a Software Engineer.
+
+How to Use Database and Query
+Master database usage and querying techniques:
+
+Database Access: Guidelines for accessing our databases and data repositories.
+
+SQL Queries: Tips for writing efficient SQL queries and tools for data analysis.
+
+How to Set Up Remote Work
+Ensure seamless remote work capabilities:
+
+Remote Access Tools: Instructions for VPN setup and accessing remote desktop services.
+
+Collaboration Tools: Explore tools like Slack, Microsoft Teams, and Zoom for effective communication and collaboration with your team.
+
+Point of Contacts
+Here are key contacts to assist you:
+
+Team Lead: Jessica Taylor - jessica.taylor@blackstone.com - Ext. 1234
+
+Technical Lead: Ryan Johnson - ryan.johnson@blackstone.com - Ext. 5678
+
+HR Contact: Emily Davis - emily.davis@blackstone.com - Ext. 9012 for HR-related queries.
+
+Additional Resources
+Blackstone Intranet: Access company news, policies, and employee resources via our intranet.
+
+Employee Assistance Program (EAP): Confidential counseling and support services for personal or professional challenges.
+
+Conclusion
+Welcome to Blackstone! I'm here to ensure your smooth transition and success as a Software Engineer. If you have any questions or need further assistance, feel free to reach out. Here's to a rewarding journey with us!
