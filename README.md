@@ -1,4 +1,4 @@
-# A.T.O.M
+# ATOM
 
 `Customed chatbot based on prompted roles with Python, Streamlit, SQLite, and ChatGPT API.`
 
