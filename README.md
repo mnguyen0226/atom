@@ -20,3 +20,5 @@ streamlit run app.py
 
 ### References
 [1] [Build a basic LLM chat app](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)
+
+[2] [Building Systems with ChatGPT](https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/)
