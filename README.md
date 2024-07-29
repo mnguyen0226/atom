@@ -3,6 +3,14 @@
 `Customed chatbot based on prompted roles with Python, Streamlit, SQLite, and ChatGPT API.`
 - Chatbot 1: Generic by single prompt.
 - Chatbot 2: Customer services with chain of thoughts.
+- Chatbot 3: Allow for user to thumbs up and down
+- TODO:
+  - Disable like / not like when generate.
+  - One question at a time.
+  - Need to extract data with LLMs
+  - Log feedbacks in database (Feedbacks)
+  - Authentication for single user per feedbacks
+  - How to allow manager to insert data (Azure Intelligence Docs? or Forms?)
 
 ### Applications
 - Use to train/assist multiple people with a small amount of documentation.
