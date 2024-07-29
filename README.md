@@ -1,6 +1,8 @@
 # ATOM
 
 `Customed chatbot based on prompted roles with Python, Streamlit, SQLite, and ChatGPT API.`
+- Chatbot 1: Generic by single prompt.
+- Chatbot 2: Customer services with chain of thoughts.
 
 ### Applications
 - Use to train/assist multiple people with a small amount of documentation.
